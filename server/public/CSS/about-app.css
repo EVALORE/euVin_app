@@ -1,0 +1,33 @@
+h4 {
+    text-align: center;
+}
+.font-app {
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    width: 100%;
+    height: 75%;
+
+}
+.about-app {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+.content-about-app {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+.content-about-app p {
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    border-radius: 1.6em;   
+    width: 50%;
+    order: 2;
+   margin: 0 auto;
+   box-shadow: 4px 4px 100px rgb(184, 183, 183);
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners_10px">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Img"
+        android:layout_width="97dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearanceOverlay" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Șah în aer liber"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/Img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Parcul la Izvor"
+        app:layout_constraintBottom_toBottomOf="@+id/icoLocation"
+        app:layout_constraintStart_toEndOf="@+id/icoLocation"
+        app:layout_constraintTop_toTopOf="@+id/icoLocation" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Luni, 11 Februarie"
+        app:layout_constraintBottom_toBottomOf="@+id/icoDate"
+        app:layout_constraintStart_toEndOf="@+id/icoDate"
+        app:layout_constraintTop_toTopOf="@+id/icoDate" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="09:00-16:00"
+        app:layout_constraintBottom_toBottomOf="@+id/icoClock"
+        app:layout_constraintStart_toEndOf="@+id/icoClock"
+        app:layout_constraintTop_toTopOf="@+id/icoClock" />
+
+    <ImageView
+        android:id="@+id/icoLocation"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/location_ico"
+        app:layout_constraintStart_toEndOf="@+id/Img"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/icoDate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/date_ico"
+        app:layout_constraintStart_toEndOf="@+id/Img"
+        app:layout_constraintTop_toBottomOf="@+id/icoLocation" />
+
+
+    <ImageView
+        android:id="@+id/icoClock"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/clock_ico"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/icoLocation"
+        app:layout_constraintStart_toStartOf="@+id/icoLocation"
+        app:layout_constraintTop_toBottomOf="@+id/icoDate" />
+
+    <ImageButton
+        android:id="@+id/HeartButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/like_heart_inactiv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Doresc sa particip la eveniment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

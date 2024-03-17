@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#67259c"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/my_square_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/rounded_corners_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serch" />
+
+    <EditText
+        android:id="@+id/serch"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corners"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:hint="Caută eveniment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/lens_ico"
+        app:layout_constraintBottom_toBottomOf="@+id/serch"
+        app:layout_constraintEnd_toEndOf="@+id/serch"
+        app:layout_constraintTop_toTopOf="@+id/serch"
+        android:contentDescription="Instructiuni" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Instrucțiuni"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/serch"
+        app:layout_constraintStart_toEndOf="@+id/serch"
+        app:layout_constraintTop_toTopOf="@+id/serch" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/info_ico"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        android:layout_marginStart="5dp"/>
+
+
+    <TextView
+        android:id="@+id/textTitles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Evenimentele"
+        android:textColor="#67259C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/my_square_view"
+        app:layout_constraintTop_toTopOf="@+id/my_square_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitles" />
+
+    <View
+        android:id="@+id/nav_bar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:background="@drawable/nav_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/my_square_view"
+        app:layout_constraintEnd_toEndOf="@+id/my_square_view"
+        app:layout_constraintStart_toStartOf="@+id/my_square_view"
+        app:layout_constraintTop_toBottomOf="@+id/listEvents" />
+
+    <ImageButton
+        android:id="@+id/buttonCategorii"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/categorii_ico_inactiv"
+        android:contentDescription="Categorii"
+        app:layout_constraintLeft_toLeftOf="@+id/nav_bar_back"
+        app:layout_constraintTop_toTopOf="@+id/nav_bar_back" />
+
+    <ImageButton
+        android:id="@+id/buttonEvenimente"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/evenimente_ico_activ"
+        android:contentDescription="Evenimente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/nav_bar_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_bar_back" />
+
+    <ImageButton
+        android:id="@+id/buttonEuVin"
+        android:layout_width="61dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/liked_ico_inactiv"
+        android:contentDescription="Evenimentele la care participi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/nav_bar_back"
+        app:layout_constraintStart_toEndOf="@+id/buttonEvenimente"
+        app:layout_constraintTop_toTopOf="@+id/nav_bar_back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

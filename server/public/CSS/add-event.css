@@ -1,0 +1,121 @@
+*{ 
+    margin:0; 
+    padding: 0; 
+    outline: 0; 
+    box-sizing: border-box; 
+} 
+html,body{ 
+    width: 100%; 
+    height: 100%; 
+} 
+ 
+form h1{ 
+    text-align: center; 
+    margin: 1em 0; 
+} 
+ 
+h2 { 
+    font-size: 1.5em; 
+} 
+ 
+.main{ 
+    width: 100%; 
+    display: flex; 
+    justify-content:center; 
+    align-items: center; 
+ 
+} 
+ 
+form { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.5em; 
+    max-width: 320px; 
+     
+} 
+ 
+#description{ 
+    border: 1px solid var(--pink-color); 
+    border-radius: 8px; 
+    margin-top: 10px; 
+    font-size: 14px; 
+ 
+} 
+ 
+ 
+input { 
+    padding: 0.7em; 
+    border-radius: 9px; 
+    outline: none; 
+    border: 1px solid var(--pink-color); 
+    width: 100%; 
+     
+} 
+ 
+.sbt-btn { 
+    padding: 1em 1.5em; 
+    font-size: 16px;    
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    border: none; 
+    border-radius: 12px; 
+    background-color:var(--pink-color); 
+    color: var(--white-color); 
+    
+} 
+ 
+footer { 
+    position: fixed;
+    bottom: 0;
+    background-color: var(--pink-color); 
+    width: 100%; 
+    height: 2%; 
+    
+} 
+ 
+.options-1 { 
+    display: flex; 
+    justify-content: center; 
+    gap:10px; 
+}
+
+.custom-file-input {
+    position: relative;
+  }
+
+  .custom-file-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    display: block;
+  }
+
+  .custom-file-input::before {
+    display: inline-block;
+    background: var(--pink-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-overflow: ellipsis;
+  }
+  #qr {
+    margin-bottom: 0.5em 1.5em;
+    background-color: var(--pink-color);
+    border-radius: 15px;
+    padding: 0.8em;
+    color: var(--white-color);
+    width: 60%;
+    text-align: center;
+  }

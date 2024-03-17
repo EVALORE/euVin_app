@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+:root {
+    --white-color: #fff;
+    --dark-color: #333;
+    --pink-color: #67259C;
+    --grey-color: #D9D9D9;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: 1.785rem;
+}
+p {
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}

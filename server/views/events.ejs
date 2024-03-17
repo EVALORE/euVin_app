@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Event</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="stylesheet" href="/CSS/add-event.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container-nav">
+        <div class="logo">
+            <img id="logo" src="/assets/logo.svg" alt="">
+        </div>
+        <nav>
+          <ul class="nav-buttons">
+            <li><a href="/index" class="nav-links">Despre noi</a></li>
+            <li><a href="#" class="nav-links">Despre aplicație</a></li>
+            <li><a href="/organizer" class="nav-links">Cabinet personal</a></li>
+            <li><a href="/event" class="nav-links">Adauga eveniment</a></li>
+            <li><a href="#" class="nav-links">Ieșire</a></li>
+          </ul>
+          <div class="hamb-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <form action="/api/events/post" method="post">
+        <h1>Adaugă Eveniment</h1>
+
+        <input type="text" name="name" placeholder="Numele evenimentului" />
+        <input type="text" name="category" placeholder="Categoria evenimentului" />
+
+        <input type="text" name="location" placeholder="Locație" />
+
+        <input type="date" name="date" id="date " placeholder="Data" />
+
+        <div class="options-1">
+          <input type="text" name="time_start" placeholder="Ora început" />
+          <input type="text" name="time_end" placeholder="Ora sfârșit" />
+        </div>
+        <div class="custom-file-input options" id="qr">
+          <span>Adaugă fotografia</span>
+          <input
+            type="file"
+            placeholder="Adaugă fotografia"
+            class="custom-file-input"
+          />
+        </div>
+        <textarea
+          placeholder="  Adaugă Descrierea"
+          id="description"
+          name="description"
+          cols="40"
+          rows="10"
+        ></textarea>
+
+        <button type="submit" class="sbt-btn">Adaugă evenimente</button>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="/JS/hambMenu.js"></script>
+  </body>
+</html>

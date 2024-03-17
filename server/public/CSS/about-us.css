@@ -1,0 +1,13 @@
+.about-us {
+    width: 90%;
+    margin: 1.875em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.about-us h3 {
+    text-align: center;
+}
+div p {
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+.start-activity h5 {
+    text-align: center;
+    margin-top: 2em;
+}
+.start-activity {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: start;
+    margin: 0 auto;
+}
+.btns:last-child {
+    margin-bottom: 2em;
+}
+button {
+    padding: 1em 3em;
+    border-radius: 32px ;
+    border-style: none;
+    background-color: var(--pink-color);
+    color: var(--white-color);
+}

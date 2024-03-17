@@ -1,0 +1,110 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabinet personal</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="stylesheet" href="/CSS/personal-cabin.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container-nav">
+        <div class="logo">
+            <img id="logo" src="/assets/logo.svg" alt="">
+        </div>
+        <nav>
+          <ul class="nav-buttons">
+            <li><a href="/index" class="nav-links">Despre noi</a></li>
+            <li><a href="#" class="nav-links">Despre aplicație</a></li>
+            <li>
+              <a href="/organizer" class="nav-links"
+                >Cabinet personal</a
+              >
+            </li>
+            <li><a href="/event" class="nav-links">Adauga eveniment</a></li>
+            <li><a href="#" class="nav-links">Ieșire</a></li>
+          </ul>
+          <div class="hamb-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <form action="/api/auth/register" method="post">
+      <h1>Cabinet personal</h1>
+      <div class="options">
+        <label for="name">Numele organizației:</label>
+        <input
+          type="text"
+          id="org-name"
+          name="Name_organization"
+          placeholder="Numele organizației"
+        />
+      </div>
+      <div class="options">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email_organization" placeholder="Email" />
+      </div>
+      <div class="options">
+        <label for="number">Număr de telefon:</label>
+        <input
+          type="number"
+          id="ph-numb"
+          name="Phone_number"
+          placeholder="Număr de telefon"
+        />
+      </div>
+      <h2>Datele personale despre organizator:</h2>
+      <div class="custom-file-input options" id="qr">
+        <span>Adaugă QR din buletin</span>
+        <input
+          type="file"
+          id="id-photo"
+          name="id-photo"
+          accept="image/*"
+          class="custom-file-input"
+        />
+        <div id="output"></div>
+      </div>
+      <div class="options">
+        <label for="name">Nume:</label>
+        <input type="text" id="f-name" name="Name" placeholder="Nume" />
+      </div>
+      <div class="options">
+        <label for="name">Prenume:</label>
+        <input
+          type="text"
+          name="Surname"
+          id="second-name"
+          placeholder="Prenume"
+        />
+      </div>
+      <div class="options">
+        <label for="personal-id">IDNP:</label>
+        <input
+          type="number"
+          id="personal-id"
+          name="IDNP_person"
+          placeholder="0000000000000"
+        />
+      </div>
+
+      <div class="terms-cond">
+        <div class="options">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms">Accept Termenii și Condițiile</label>
+        </div>
+      </div>
+      <button type="submit" class="sbt-btn">Trimite pentru verificare</button>
+    </form>
+
+    <footer></footer>
+    <script src="/JS/hambMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="/JS/scanQR.js"></script>
+  </body>
+</html>
